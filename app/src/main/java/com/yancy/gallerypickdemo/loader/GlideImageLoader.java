@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 import com.yancy.gallerypick.inter.ImageLoader;
 import com.yancy.gallerypick.widget.GalleryImageView;
 import com.yancy.gallerypickdemo.R;
@@ -20,8 +21,7 @@ public class GlideImageLoader implements ImageLoader {
     public void displayImage(Activity activity, Context context, String path, GalleryImageView galleryImageView, int width, int height) {
         Glide.with(context)
                 .load(path)
-                .placeholder(R.mipmap.gallery_pick_photo)
-                .centerCrop()
+                .apply(new RequestOptions().centerCrop().placeholder(R.mipmap.gallery_pick_photo))
                 .into(galleryImageView);
     }
 

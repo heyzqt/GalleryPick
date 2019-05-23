@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
 
 import java.util.List;
 
@@ -37,7 +38,7 @@ public class PhotoAdapter extends RecyclerView.Adapter<PhotoAdapter.ViewHolder> 
     public void onBindViewHolder(ViewHolder holder, int position) {
         Glide.with(context)
                 .load(result.get(position))
-                .centerCrop()
+                .apply(new RequestOptions().centerCrop())
                 .into(holder.ivPhoto);
     }
 
