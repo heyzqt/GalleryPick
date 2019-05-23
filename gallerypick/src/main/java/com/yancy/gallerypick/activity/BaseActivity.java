@@ -3,7 +3,7 @@ package com.yancy.gallerypick.activity;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * 自定义 Activity 所有 Activity 继承此类 方便管理

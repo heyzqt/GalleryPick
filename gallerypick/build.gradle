@@ -1,12 +1,12 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group='com.github.Yancy'
+group = 'com.github.Yancy'
 
 android {
     compileSdkVersion 28
     buildToolsVersion '28.0.3'
-    resourcePrefix "GalleryPick"	//这个随便填
+    resourcePrefix "GalleryPick"    //这个随便填
 
     defaultConfig {
         minSdkVersion 19
@@ -28,9 +28,9 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:28.0.0'
-    compile 'com.android.support:recyclerview-v7:28.0.0'
-    compile 'com.yalantis:ucrop:2.2.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha05'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-alpha05'
+    implementation 'com.yalantis:ucrop:2.2.0'
 }
 
 // 指定编码
